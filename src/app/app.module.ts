@@ -1,32 +1,32 @@
+import { AuthGuard } from './../auth.guard';
+import { from } from 'rxjs';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { AppRoutingModule} from './app-routing.module';
-import { FormsModule } from '@angular/forms';
+import{ FormsModule} from '@angular/forms';
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { PageNotFoundCompnentComponent } from './page-not-found-compnent/page-not-found-compnent.component';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
-
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
-         AppComponent,
-         PageNotFoundCompnentComponent,
-         LoginComponent,
-         HomeComponent,
-         HeaderComponent,
-         ProductListComponent,
-         ProductDetailsComponent,
-        
+    AppComponent,
+    LoginComponent,
+    HomeComponent,
+    HeaderComponent,
+    ProductListComponent,
+    ProductDetailsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+  HttpClientModule
   ],
-  providers: [],
+  providers: [AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
