@@ -1,0 +1,37 @@
+<p>signup works!</p>
+y<div class="row">
+    <div class="col-4"></div>
+    <div class="col-4 box">
+       <div class="row"> 
+           <div class="col-12 blue-head">register</div>
+           <form [formGroup]="userprofileForm" (ngSubmit)= "onSubmit()">
+            <div class="form-group">
+                <label>First name</label>
+                <input type="text" class="form-control" name="firstName" ngModel>
+            </div>
+            <div class="form-group">
+                <label>Last name</label>
+                <input type="text" class="form-control" name="lastName" ngModel>
+            </div><div class="form-group">
+                <label>Email</label>
+                <input type="text" class="form-control" name="email" ngModel>
+            </div><div class="form-group">
+                <label>Password</label>
+                <input type="text" class="form-control" name="password" ngModel>
+            </div>
+            <br>
+           <button type="submit" [disabled]="userprofileForm.invalid" class="btb btn-primary">Sign Up</button>
+
+          </form>
+       </div>
+     </div>
+    
+      </div>
+
+<br>Dirty:{{userprofileForm.dirty}}
+<br>Touched:{{userprofileForm.touched}}
+<br>Valid:{{userprofileForm.valid}}
+<br>Value:{{userprofileForm.value | json}}
+
+
+

@@ -1,6 +1,6 @@
+//import { SignupComponent } from './signup/signup.component';
+import { RegisterComponent } from './register/register.component';
 import { AuthGuard } from './../auth.guard';
-import { ProductListComponent } from './product-list/product-list.component';
-import { ProductDetailsComponent } from './product-details/product-details.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
@@ -13,9 +13,14 @@ const routes: Routes =
   { path:"",redirectTo:'login',pathMatch:'full'},
   { path:"login",component:LoginComponent},
   { path:"home",component:HomeComponent,canActivate:[AuthGuard]},
-  { path: "product-list",component:ProductListComponent,canActivate:[AuthGuard]},
-  { path: "product-details/:id",component:ProductDetailsComponent},
+  { path: "register",component:RegisterComponent},
+
+  { path: 'products',loadChildren:()=>import('./product/product.module').then(m =>m.ProductModule) },
+
   { path: '**',component: PageNotFoundCompnentComponent}
+  
+
+
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

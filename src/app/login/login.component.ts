@@ -9,6 +9,7 @@ import{ FormsModule} from '@angular/forms';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
+ 
   constructor(private router: Router,private _loginservice:LoginService) { }
   submit()
   {

@@ -1,3 +1,4 @@
+import { SearchPipe } from './product/search.pipe';
 import { AuthGuard } from './../auth.guard';
 import { from } from 'rxjs';
 import { NgModule } from '@angular/core';
@@ -8,23 +9,24 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
-import { ProductListComponent } from './product-list/product-list.component';
-import { ProductDetailsComponent } from './product-details/product-details.component';
 import { HttpClientModule } from '@angular/common/http';
+import { RegisterComponent } from './register/register.component';
+import{ReactiveFormsModule} from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
+    SearchPipe,
     HomeComponent,
     HeaderComponent,
-    ProductListComponent,
-    ProductDetailsComponent
-  ],
+    RegisterComponent
+    ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-  HttpClientModule
+  HttpClientModule,
+  ReactiveFormsModule
   ],
   providers: [AuthGuard],
   bootstrap: [AppComponent]

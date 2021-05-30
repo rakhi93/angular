@@ -5,7 +5,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  image="https://lh3.googleusercontent.com/QE_RwnywUEAvCtl_Sv7i1qsY9U3mfcZIK5h36jS5R6X5iALPLXAxO1vcazcLkfRWLD0BTw=s159";
+
+  image="https://cdn.rawgit.com/DeborahK/Angular-ReactiveForms/187d0a8060a67286811c1a2d61b3ca4fae45e6a4/APM/src/favicon.ico"
   constructor() { }
 
   ngOnInit(): void {

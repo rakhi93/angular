@@ -3,7 +3,7 @@
 }
 .box{
     border: black solid 1px;
-    height:220px;
+    height:410px;
     margin-top: 30px;
     text-align: center;
 }
@@ -13,4 +13,8 @@
     background-color: rgb(23, 129, 179);
     height:50px;
     padding:10px 0px 10px 20px ;
+}
+.form-control ,ng-valid.ng-touched
+{
+    color: red;
 }

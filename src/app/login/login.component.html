@@ -5,10 +5,31 @@
        <div class="row"> 
            <div class="col-12 blue-head">Login</div>
            <form>
-            <input type="text" id="login" class="login-input"  placeholder="login"><br>
-            <input type="password" id="password" class="login-input" placeholder="password"><br>
-            <input type="submit" (click)="submit()" class="login-input" value="Log In">
+
+             <div class="form-group">
+               <label for = "login">Username</label>
+               <input required minlength="3" maxlength="8" pattern ="apple" ngModel name="login" #login = "ngModel"  type="text" id="login" class="login-input"  placeholder="login"><br>
+              <div class="alert" *ngIf ="login.touched && !login.valid">
+                <div *ngIf="login?.errors?.required">username is required !</div>
+
+            </div>
+          </div><br>
+          <div class="form-group">
+            <label for = "password">Password</label>
+            <input required minlength="6" maxlength="15" pattern ="Redapple@jammu" ngModel name="password" #password = "ngModel"  type="password" id="password" class="password-input"  placeholder="password"><br>
+           <div class="alert" *ngIf ="password.touched && !password.valid">
+            <div *ngIf="password?.errors?.required">Password is required !</div>
+  
+         </div>
+       </div>
+            <input type="submit"  (click)="submit()" class="login-input" value="Log In"><br>
+            <a  [routerLink]="['/register']" class="f" id="reg">New Registration!</a>
           </form>
        </div>
-     </div>
-</div>
+
+     </div>               
+     </div>                   
+     
+<br>
+
+
