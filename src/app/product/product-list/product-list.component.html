@@ -10,21 +10,22 @@
        <div>
            <table>
                <tr>
-                   <th><button class="btn btn-primary">Show Image</button></th>
-                   <th>Product</th>
+                <th><button class="btn btn-primary" (click)="icon()">Show Image</button></th>
+                <th>Product</th>
                    <th>Code</th>
                    <th>Availability</th>
                    <th>Price</th>
                    <th>5 Star Rating</th>
                    <th></th>
                </tr>
+               @fade
                <tr *ngFor="let product of products | search:searchProduct">
                 <td></td>
-                   <td><a [routerLink]="['/product-details',product.productId]" href="">{{product.productName}}</a></td>
+                   <td><a routerLink={{product.productId}} href="">{{product.productName}}</a></td>
                    <td>{{product.productCode}}</td>
                    <td>{{product.releaseDate}}</td>
                    <td>${{product.price}}</td>
-                   <td><img src="https://lh3.googleusercontent.com/4Mi3OIddJiio5-aQ4NjjKw7aRN3FjQ_NnCRyD4MHe0u97EU21FL1hbhndMWt9KdezBWWMVA=s17" *ngFor='let in of counter(product.starRating)'></td>
+                   <td><img src="https://www.iconsdb.com/icons/preview/red/star-xxl.png" *ngFor='let in of counter(product.starRating)'></td>
                    <td><button class="btn btn-primary">Edit</button></td>
                </tr>
            </table>

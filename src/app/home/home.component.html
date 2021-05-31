@@ -5,7 +5,12 @@
            <div class="col-12 blue-head">Welcome</div>
 
        </div>
-       <img src="{{image}}" class="acme-image" alt="acme not found">
+       <button (click) = "animate()">Click Me</button>
+       <div [@myanimation] = "state" class = "rotate">
+          <img src = {{image}} width = "100" height = "100">
+
+       </div>
+
        <div class="welcome-foot-top">Developed by</div>
        <div class="welcome-foot-mid"> Rakhi</div>
        <pre class="welcome-foot">Kameda Infologics

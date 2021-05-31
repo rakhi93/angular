@@ -1,4 +1,3 @@
-import { SearchPipe } from './product/search.pipe';
 import { AuthGuard } from './../auth.guard';
 import { from } from 'rxjs';
 import { NgModule } from '@angular/core';
@@ -12,21 +11,22 @@ import { HeaderComponent } from './header/header.component';
 import { HttpClientModule } from '@angular/common/http';
 import { RegisterComponent } from './register/register.component';
 import{ReactiveFormsModule} from '@angular/forms';
+import{BrowserAnimationsModule} from '@angular/platform-browser/animations';
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    SearchPipe,
     HomeComponent,
     HeaderComponent,
     RegisterComponent
-    ],
+      ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-  HttpClientModule,
-  ReactiveFormsModule
+    BrowserAnimationsModule,
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [AuthGuard],
   bootstrap: [AppComponent]

@@ -1,4 +1,3 @@
-//import { SignupComponent } from './signup/signup.component';
 import { RegisterComponent } from './register/register.component';
 import { AuthGuard } from './../auth.guard';
 import { BrowserModule } from '@angular/platform-browser';
@@ -19,8 +18,6 @@ const routes: Routes =
 
   { path: '**',component: PageNotFoundCompnentComponent}
   
-
-
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
